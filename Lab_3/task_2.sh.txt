@@ -1,0 +1,20 @@
+#!/bin/bash
+read -p "Enter the file name : " file
+if [ -r $file ]
+then
+echo "$file Found "
+if [[ -r "$file" && -w "$file" ]]
+then
+echo "$file  is both readable and writeable"
+elif [ -r "$file" ]
+then
+echo "$file is readable only"
+elif [ -w "$file" ]
+then 
+echo "$file is writeable only"
+else
+echo "$file is nethier readable nor writable"
+fi
+else
+echo "$file not Found "
+fi

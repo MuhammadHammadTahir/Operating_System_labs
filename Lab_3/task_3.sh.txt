@@ -1,0 +1,8 @@
+#!/bin/bash
+read -p "Enter a Number : " num
+echo "Table for $num : "> output.txt
+for((i=1;i<=10;i++))
+do
+echo "$num * $i  = $((num * i))">>output.txt
+done
+echo "$num table is saved in the output.txt"
